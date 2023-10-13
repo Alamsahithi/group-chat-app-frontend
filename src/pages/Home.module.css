@@ -1,0 +1,144 @@
+.container {
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  grid-template-areas: "container_1 container_2";
+}
+
+.container_1 {
+  grid-area: container_1;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "chats";
+  grid-template-rows: 69.5px 10fr;
+  border-right: 1px solid rgb(215, 215, 215);
+}
+
+.container_1_box_1 {
+  grid-area: header;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.profile_pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.profile_pic:hover {
+  cursor: pointer;
+}
+
+.pr .container_1_box_2 {
+  grid-area: chats;
+  overflow-y: auto;
+}
+
+.chats,
+.invitations {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat,
+.invitation {
+  height: 70px;
+  padding: 10px;
+  border-bottom: 1px solid rgb(239, 238, 238);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chat:hover,
+.invitation:hover {
+  cursor: pointer;
+}
+
+.icon {
+  border: 1px solid grey;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.container_2 {
+  grid-area: container_2;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 69.5px 10fr 1fr;
+}
+
+.container_2_box_1 {
+  background-color: #f0f2f5;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selected_chat,
+.selected_invitation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.selected_chat:hover,
+.selected_invitation:hover {
+  cursor: pointer;
+}
+
+.container_2_box_2 {
+  overflow-y: auto;
+}
+
+.container_2_box_3 {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 15fr 1fr;
+  align-items: center;
+  background-color: #f0f2f5;
+}
+
+.message_input {
+  border: none;
+  font-size: 16px;
+}
+
+.paper_clip_outlined,
+.send_button {
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.error {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error p {
+  background-color: rgb(255, 212, 212);
+  padding: 10px;
+  border-radius: 5px;
+}
